@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>تسجيل الدخول</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="login-container" id="loginForm">
+        <h2 style="color: #FFD700;">تسجيل الدخول</h2>
+        <p style="color: #FFD700;">ليس لديك حساب؟ <a class="link" href="signup.html" style="color: white;">إنشاء
+                حساب</a></p>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+            </div>
+            <div class="form-group password-group">
+                <label for="password">كلمة المرور</label>
+                <div class="password-wrapper">
+                    <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+                    <span class="toggle-password" id="togglePassword"><i class="fa-solid fa-eye"></i></span>
+                </div>
+                <a href="#" class="forgot-password" id="forgotPasswordLink">نسيت كلمة السر؟</a>
+            </div>
+            <button type="submit" class="signup-btn">تسجيل الدخول</button>
+        </form>
+        <p class="error-message" id="errorMessage">يرجى إدخال بيانات صحيحة</p>
+        <p class="success-message" id="successMessage">تم تسجيل الدخول بنجاح!</p>
+    </div>
+    <script type="text/javascript" src="./login.js"></script>
+</body>
+
+</html>
