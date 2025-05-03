@@ -26,8 +26,9 @@
   --gradX: 100%;
   --gradY: 50%;
   --c1: #ffd700;
-  --c2: rgba(168, 239, 255, 0.1);
+  --c2: #a8efff1a;
 }
+/* for spinner and impotant links*/
 .link {
   text-decoration: none;
   padding: 10px 15px;
@@ -59,6 +60,7 @@ body {
   align-items: center;
   overflow: hidden;
 }
+/* for signup.html role selection*/
 .role-selection,
 .signup-container {
   text-align: center;
@@ -246,7 +248,11 @@ body {
 .form-group input:-webkit-autofill,
 .form-group input:-webkit-autofill:hover,
 .form-group input:-webkit-autofill:focus,
-.form-group input:-webkit-autofill:active {
+.form-group input:-webkit-autofill:active,
+.form-group textarea:-webkit-autofill,
+.form-group textarea:-webkit-autofill:hover,
+.form-group textarea:-webkit-autofill:focus,
+.form-group textarea:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #2d2d2d inset !important;
   -webkit-text-fill-color: #ddd !important;
   caret-color: #f5e050 !important;
@@ -323,6 +329,7 @@ body {
     margin: 1rem;
   }
 }
+/* login container*/
 .login-container {
   display: block;
   background: #1a1a1a;
@@ -337,6 +344,7 @@ body {
   padding: 2rem;
   margin: 0 auto;
 }
+/* for login.html password input*/
 .password-group {
   position: relative;
 }
@@ -358,6 +366,7 @@ body {
 .password-wrapper input {
   padding-left: 40px;
 }
+/* for login html forget password link */
 .forgot-password {
   display: block;
   margin-top: 0.5rem;
@@ -368,4 +377,36 @@ body {
 .forgot-password:hover {
   color: #ffd700;
   text-decoration: underline;
+}
+/* for signup.html spinner */
+.spinner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+}
+.spinner::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 2px solid #2d2d2d;
+  border-radius: 50%;
+  border-top: 2px solid #ffd700;
+  animation: loop 1s linear infinite forwards;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+@keyframes loop {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(720deg);
+  }
 }

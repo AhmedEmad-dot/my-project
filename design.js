@@ -146,7 +146,14 @@ document
     const role = localStorage.getItem("userRole");
     const errorMessage = document.getElementById("errorMessage");
     const successMessage = document.getElementById("successMessage");
-
+    const spineer = document.getElementById("spinner");
+    const goTo = (role) => {
+      if (role === "تاجر") {
+        window.location.href = "trader.html";
+      } else if (role === "مكتب شحن") {
+        window.location.href = "shipping.html";
+      }
+    };
     // إخفاء الرسائل السابقة
     errorMessage.style.display = "none";
     successMessage.style.display = "none";
@@ -197,8 +204,9 @@ document
       errorMessage.style.display = "block";
       return;
     }
-
     successMessage.style.display = "block";
+    spineer.style.display = "block";
+
     console.log(
       "Role:",
       role,
@@ -219,5 +227,9 @@ document
       "Product Type:",
       productType || "N/A"
     );
+
+    setTimeout(() => {
+      goTo(role);
+    }, 3000);
     // هنا ممكن تضيف لوجيك لربط الـ Backend لاحقًا
   });
